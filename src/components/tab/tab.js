@@ -9,7 +9,7 @@ import './tab.scss'
 
 @inject('demoStore')
 @observer
-class Tab extends Component {
+export default class Tab extends Component {
 
   @observable name = 'Tab Component';
   

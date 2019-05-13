@@ -33,16 +33,21 @@ export default {
         logError('api', '请求接口出现问题', e)
       }
     }
+    
+    if (process.env.TARO_ENV === 'weapp') {
 
-    // 添加拦截器
-    if (process.env.NODE_ENV !== 'production') {
-      // 打印请求
-      Taro.addInterceptor(Taro.interceptors.logInterceptor)
+      // 添加拦截器
+      if (process.env.NODE_ENV !== 'production') {
+        console.log('Taro.interceptors', Taro.interceptors, Taro)
+        // 打印请求
+        Taro.addInterceptor(Taro.interceptors.logInterceptor)
+      }
+      // 请求超时
+      Taro.addInterceptor(Taro.interceptors.timeoutInterceptor)
+      // 自定义拦截器
+      // Taro.addInterceptor(interceptor)
+      
     }
-    // 请求超时
-    Taro.addInterceptor(Taro.interceptors.timeoutInterceptor)
-    // 自定义拦截器
-    // Taro.addInterceptor(interceptor)
 
     return Taro.request(option)
   },

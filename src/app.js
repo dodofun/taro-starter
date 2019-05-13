@@ -31,7 +31,8 @@ class App extends Component {
 
   componentWillMount () {
     // 全局变量
-    console.log('HOST', HOST)
+    // eslint-disable-next-line
+    console.log('_API_HOST',  _API_HOST)
   }
   
   componentDidMount () {}

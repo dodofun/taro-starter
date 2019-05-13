@@ -7,7 +7,7 @@ import {
   reaction,
   runInAction
 } from 'mobx'
-import {getId} from '../actions'
+import {getWxUserInfo} from '../actions'
 
 class Demo {
   @observable name = 'DH'
@@ -28,7 +28,7 @@ class Demo {
   @action
   async getId() {
     
-    let result = await getId()
+    let result = await getWxUserInfo()
     // 在每个 await 之后，状态修改代码应该被包装成动作
     this.age = result
     this.setName('DODO')

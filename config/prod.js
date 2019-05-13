@@ -4,6 +4,7 @@ module.exports = {
     NODE_ENV: '"production"'
   },
   defineConstants: {
+    _API_HOST: '"https://dodo.com"'
   },
   weapp: {},
   h5: {

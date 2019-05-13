@@ -6,7 +6,7 @@ module.exports = {
   },
   // 全局变量
   defineConstants: {
-    HOST: '"https://dodo.com"'
+    _API_HOST: '"https://dodo.com"'
   },
   weapp: {},
   h5: {

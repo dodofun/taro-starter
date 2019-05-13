@@ -105,7 +105,8 @@ const config = {
     router: {
       mode: 'hash', // 或者是 'browser'
       basename: '/myapp'
-    }
+    },
+    esnextModules: ['taro-ui']
   }
 }
 
