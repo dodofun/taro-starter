@@ -18,7 +18,8 @@
           ".tsx"
         ]
       }
-    ]
+    ],
+    "import/prefer-default-export": 0
   },
   "parser": "babel-eslint"
 }
