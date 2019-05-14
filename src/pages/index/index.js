@@ -3,10 +3,10 @@ import {View, Button, Text} from '@tarojs/components'
 import {observer, inject} from '@tarojs/mobx'
 import {observable} from 'mobx'
 import dayjs from 'dayjs'
+import { AtFab } from 'taro-ui'
+
 import './index.scss'
-
 import Tab from '../../components/tab/tab'
-
 
 @inject('demoStore')
 @observer
@@ -100,6 +100,11 @@ export default class Index extends Component {
         <Button onClick={this.getId.bind(this, 2)}>异步获取ID</Button>
         <Text>{this.showText}</Text>
         <Tab />
+
+        <AtFab>
+          <Text className='at-fab__icon at-icon at-icon-menu'></Text>
+        </AtFab>
+        
       </View>
     )
   }
